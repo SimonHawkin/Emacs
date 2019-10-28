@@ -49,6 +49,8 @@
 (global-set-key [f9] 'save-buffer)
 ;
 (global-set-key [C-f11] 'font-lock-mode)
+;
+(global-set-key "\e\C-_" 'dabbrev-completion) ; some keyboards
 
 ;;; MY LITTLE PIECES OF CODE
 
