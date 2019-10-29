@@ -82,6 +82,7 @@ Convenient to use with comment-region."
   )
 (global-set-key "\C-x4#" 'cema-set-comments)
 (global-set-key "\C-x#" 'comment-region)
+(global-set-key "\C-c#" 'uncomment-region)
 
 ;; I rather like my way of inserting html/xml tags
 (defun cema-html-insert-tag (tag)
