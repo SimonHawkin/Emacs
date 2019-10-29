@@ -51,6 +51,7 @@
 (global-set-key [C-f11] 'font-lock-mode)
 ;
 (global-set-key "\e\C-_" 'dabbrev-completion) ; some keyboards
+(global-set-key [select] 'move-end-of-line)
 
 ;;; MY LITTLE PIECES OF CODE
 
