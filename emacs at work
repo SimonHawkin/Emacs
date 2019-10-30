@@ -84,6 +84,19 @@ Convenient to use with comment-region."
 (global-set-key "\C-x#" 'comment-region)
 (global-set-key "\C-c#" 'uncomment-region)
 
+;; enwiden-window complements enlarge-window      
+;; even if it is based on it                      
+(defun enwiden-window (&optional size)            
+  "Make window wider (or narrower) by size chars. 
+                                                  
+By default, expands the width by 1."              
+  (interactive "sSize ")                          
+  (setq size (string-to-number size))             
+  (if (= 0 size)                                  
+      (setq size 1))                              
+  (enlarge-window size 'horizontal))              
+(global-set-key "\C-c^" 'enwiden-window)          
+    
 ;; I rather like my way of inserting html/xml tags
 (defun cema-html-insert-tag (tag)
   "Insert an html tag, with possible parameters.
