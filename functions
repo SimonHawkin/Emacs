@@ -33,6 +33,19 @@ Simon Hawkin <cema@cs.umd.edu> 03/14/1998"
 (global-set-key "\C-c6" 'match-parenthesis)
 (global-set-key [f6] 'match-parenthesis)
 
+;; enwiden-window complements enlarge-window      
+;; even if it is based on it                      
+(defun enwiden-window (&optional size)            
+  "Make window wider (or narrower) by size chars. 
+                                                  
+By default, expands the width by 1."              
+  (interactive "sSize ")                          
+  (setq size (string-to-number size))             
+  (if (= 0 size)                                  
+      (setq size 1))                              
+  (enlarge-window size 'horizontal))              
+(global-set-key "\C-c^" 'enwiden-window)          
+    
 ;; I rather like my way of inserting html/xml tags
 (defun cema-html-insert-tag (tag)
   "Insert an html tag, with possible parameters.
