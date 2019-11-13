@@ -209,6 +209,7 @@ Simon Hawkin <Simon_Hawkin@yahoo.com> 2004/09/29
 ;; use cperl-mode instead of perl-mode
 (setq auto-mode-alist (rassq-delete-all 'perl-mode auto-mode-alist))
 (add-to-list 'auto-mode-alist '("\\.\\(p\\([lm]\\)\\)\\'" . cperl-mode))
+(add-to-list 'auto-mode-alist '("\\.esp$" . cperl-mode))
 
 (setq interpreter-mode-alist (rassq-delete-all 'perl-mode interpreter-mode-alist))
 (add-to-list 'interpreter-mode-alist '("perl" . cperl-mode))
