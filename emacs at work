@@ -216,6 +216,9 @@ Simon Hawkin <Simon_Hawkin@yahoo.com> 2004/09/29
 (add-to-list 'interpreter-mode-alist '("perl5" . cperl-mode))
 (add-to-list 'interpreter-mode-alist '("miniperl" . cperl-mode))
 
+(add-hook 'cperl-mode-hook                                                                                                             |# into this module due to practical considerations, but we want to move as many
+          (lambda () (cperl-set-style "PerlStyle")))
+
 ;; Visual Basic mode
 (autoload 'visual-basic-mode "visual-basic-mode" "Visual Basic mode." t)
 (setq auto-mode-alist (append '(("\\.\\(frm\\|bas\\|cls\\)$" . 
